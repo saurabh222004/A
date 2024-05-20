@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moving Car Animation</title>
+		<!-- <link rel="stylesheet" href="styles.css"> -->
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+				background-color: #87ceeb; /* Sky blue background */
+			}
+
+			.road {
+				position: relative;
+				width: 100%;
+				height: 200px;
+				background-color: #333; /* Road color */
+				overflow: hidden;
+			}
+
+			.car {
+				position: absolute;
+				bottom: 20px; /* Positioning the car above the road */
+				left: -150px; /* Start position off-screen */
+				width: 150px;
+				height: 60px;
+				animation: moveCar 5s linear infinite;
+			}
+
+			.car-body {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background-color: red; /* Car color */
+				border-radius: 10px 10px 5px 5px;
+			}
+
+			.roof {
+				position: absolute;
+				top: -20px;
+				left: 20px;
+				width: 110px;
+				height: 40px;
+				background-color: red;
+				border-radius: 10px;
+			}
+
+			.window {
+				position: absolute;
+				top: -15px;
+				width: 40px;
+				height: 25px;
+				background-color: lightblue;
+				border-radius: 5px;
+			}
+
+			.window-front {
+				left: 25px;
+			}
+
+			.window-back {
+				right: 25px;
+			}
+
+			.wheel {
+				position: absolute;
+				bottom: -15px;
+				width: 30px;
+				height: 30px;
+				background-color: black;
+				border-radius: 50%;
+			}
+
+			.wheel-front {
+				left: 20px;
+			}
+
+			.wheel-back {
+				right: 20px;
+			}
+
+			/* Animation */
+			@keyframes moveCar {
+				0% {
+					left: -150px;
+				}
+				100% {
+					left: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="road">
+			<div class="car">
+				<div class="car-body">
+					<div class="roof"></div>
+					<div class="window window-front"></div>
+					<div class="window window-back"></div>
+				</div>
+				<div class="wheel wheel-front"></div>
+				<div class="wheel wheel-back"></div>
+			</div>
+		</div>
+	</body>
+</html>
