@@ -2,14 +2,14 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 let squareSize = 50;
-let x = Math.random();
-let y = Math.random();
+let x = Math.random() * (canvas.width - squareSize);
+let y = Math.random() * (canvas.height - squareSize);
 let dx = 2;
 let dy = 2;
 
 function draw() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = "blue";
+	ctx.fillStyle = "red";
 	ctx.fillRect(x, y, squareSize, squareSize);
 
 	x += dx;

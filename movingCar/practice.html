@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				margin: 0%;
+				background-color: #87ceeb;
+			}
+			.road {
+				background: #333;
+				height: 200px;
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+			}
+			.bump {
+				position: absolute;
+				bottom: 40px;
+				height: 50px;
+				width: 120px;
+				left: 15px;
+				border-radius: 10px;
+				background-color: red;
+			}
+			.window1 {
+				position: absolute;
+				top: 5px;
+				right: 10px;
+				width: 40px;
+				height: 25px;
+				background-color: lightblue;
+				border-radius: 5px;
+			}
+			.window2 {
+				position: absolute;
+				top: 5px;
+				right: 70px;
+				width: 40px;
+				height: 25px;
+				background-color: lightblue;
+				border-radius: 5px;
+			}
+			.wheel {
+				position: absolute;
+				bottom: -15px;
+				width: 30px;
+				height: 30px;
+				background-color: black;
+				border-radius: 50%;
+			}
+
+			.wheel-front {
+				left: 20px;
+			}
+
+			.wheel-back {
+				right: 20px;
+			}
+			.car {
+				position: absolute;
+				left: -100px;
+				top: 120px;
+				border-radius: 10px;
+				background-color: red;
+				height: 60px;
+				width: 150px;
+
+				animation: moveCar 5s linear infinite;
+			}
+			@keyframes moveCar {
+				0% {
+					left: -100px;
+				}
+				100% {
+					left: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="road">
+			<div class="car">
+				<div class="bump">
+					<div class="window1"></div>
+					<div class="window2"></div>
+				</div>
+				<div class="wheel wheel-front"></div>
+				<div class="wheel wheel-back"></div>
+			</div>
+		</div>
+	</body>
+</html>
